@@ -1,0 +1,479 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for scripts\controllers\jobPostingUrl.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">scripts/controllers/</a> jobPostingUrl.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">58.11% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>43/74</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">25% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>5/20</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">55% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>11/20</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">58.11% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>43/74</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">'use strict';
+&nbsp;
+angular.module('angularjsUnitTestApp')
+  .controller('JobPostingUrlCtrl', function ($log, jobPostingUrlService) {
+&nbsp;
+    var jobPostingUrlCtrl = this;
+&nbsp;
+    var searchAllPostingUrl = function () {
+      jobPostingUrlCtrl.shouldWaitToLoadJobPostingUrl = true;
+      jobPostingUrlCtrl.jobUrls = [];
+      jobPostingUrlService.getAllJobPostingUrl(function (response) {
+        var jobPostingUrls = angular.fromJson(response).data;
+        angular.forEach(jobPostingUrls, function(jobPostingUrl) {
+          jobPostingUrlCtrl.jobUrls.push({
+            id: jobPostingUrl.id,
+            name: jobPostingUrl.name,
+            url: "https://domain.com?t="+jobPostingUrl.name,
+            parameters: jobPostingUrl.parameters
+          });
+        });
+        jobPostingUrlCtrl.shouldWaitToLoadJobPostingUrl = false;
+      }, <span class="fstat-no" title="function not covered" >function (responseError) {</span>
+<span class="cstat-no" title="statement not covered" >        jobPostingUrlCtrl.shouldWaitToLoadJobPostingUrl = false;</span>
+<span class="cstat-no" title="statement not covered" >        $log.error(responseError);</span>
+      });
+    };
+&nbsp;
+    var cleanJobPostingData = function () {
+      jobPostingUrlCtrl.jobPostingData = {
+        name: null,
+        jobBoardCategory: null,
+        stafflyCohort: null,
+        stafflyCity: null,
+        stafflyState: null,
+        utmSource: null,
+        utmMedium: null,
+        utmCampaign: null
+      };
+    };
+&nbsp;
+    var cleanErrorMessage = function () {
+      jobPostingUrlCtrl.showMessageError = false;
+      jobPostingUrlCtrl.messageError = '';
+    };
+&nbsp;
+    var initController = function () {
+      jobPostingUrlCtrl.jobUrls = [];
+      jobPostingUrlCtrl.shouldWaitToLoadJobPostingUrl = false;
+      jobPostingUrlCtrl.shouldWaitToSaveJobPostingUrl = false;
+      jobPostingUrlCtrl.sortJobPostingUrlTable = {
+        column: 'id',
+        descending: true
+      };
+      cleanErrorMessage();
+      cleanJobPostingData();
+      searchAllPostingUrl();
+    };
+&nbsp;
+    var createErrorMessage = <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >      jobPostingUrlCtrl.showMessageError = true;</span>
+<span class="cstat-no" title="statement not covered" >      jobPostingUrlCtrl.messageError = 'Job posting url is duplicated';</span>
+    };
+&nbsp;
+    jobPostingUrlCtrl.validateJobPostingUrl = <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >      cleanErrorMessage();</span>
+<span class="cstat-no" title="statement not covered" >      if(jobPostingUrlCtrl.jobPostingData.name !== null &amp;&amp; jobPostingUrlCtrl.jobPostingData.name !== '') {</span>
+<span class="cstat-no" title="statement not covered" >        jobPostingUrlService.getJobPostingUrlByName(jobPostingUrlCtrl.jobPostingData.name, <span class="fstat-no" title="function not covered" >function (res) {</span></span>
+<span class="cstat-no" title="statement not covered" >          var responseJobPostingName = angular.fromJson(res).data;</span>
+<span class="cstat-no" title="statement not covered" >          if (responseJobPostingName !== null &amp;&amp; responseJobPostingName.name !== null) {</span>
+<span class="cstat-no" title="statement not covered" >            createErrorMessage();</span>
+          } else {
+<span class="cstat-no" title="statement not covered" >            cleanErrorMessage();</span>
+          }
+        }, <span class="fstat-no" title="function not covered" >function (resError) {</span>
+<span class="cstat-no" title="statement not covered" >          createErrorMessage();</span>
+<span class="cstat-no" title="statement not covered" >          $log.error(resError);</span>
+        });
+      }
+    };
+&nbsp;
+    jobPostingUrlCtrl.saveJobPostingUrl = function() {
+      cleanErrorMessage();
+      jobPostingUrlCtrl.shouldWaitToSaveJobPostingUrl = true;
+      jobPostingUrlService.createJobPostingUrl(jobPostingUrlCtrl.jobPostingData, function (response) {
+        cleanJobPostingData();
+        searchAllPostingUrl();
+      }, <span class="fstat-no" title="function not covered" >function (responseError) {</span>
+<span class="cstat-no" title="statement not covered" >        $log.error(responseError);</span>
+      });
+    };
+&nbsp;
+    jobPostingUrlCtrl.deleteJobPostingUrl = <span class="fstat-no" title="function not covered" >function (jobPostingUrl) {</span>
+<span class="cstat-no" title="statement not covered" >      cleanErrorMessage();</span>
+<span class="cstat-no" title="statement not covered" >      jobPostingUrlCtrl.shouldWaitToLoadJobPostingUrl = true;</span>
+<span class="cstat-no" title="statement not covered" >      jobPostingUrlService.deleteJobPostingUrl(jobPostingUrl, <span class="fstat-no" title="function not covered" >function (response) {</span></span>
+<span class="cstat-no" title="statement not covered" >        searchAllPostingUrl();</span>
+<span class="cstat-no" title="statement not covered" >        $log.info(response);</span>
+<span class="cstat-no" title="statement not covered" >        jobPostingUrlCtrl.shouldWaitToLoadJobPostingUrl = false;</span>
+      }, <span class="fstat-no" title="function not covered" >function(responseError) {</span>
+<span class="cstat-no" title="statement not covered" >        jobPostingUrlCtrl.shouldWaitToLoadJobPostingUrl = false;</span>
+<span class="cstat-no" title="statement not covered" >        jobPostingUrlCtrl.showMessageError = true;</span>
+<span class="cstat-no" title="statement not covered" >        var errorResponse = angular.fromJson(responseError).data;</span>
+<span class="cstat-no" title="statement not covered" >        var messageError = "Error deleting job posting url (Id: "+jobPostingUrl+") ";</span>
+<span class="cstat-no" title="statement not covered" >        if(errorResponse.errorCode !== null) {</span>
+<span class="cstat-no" title="statement not covered" >          messageError = messageError + " Code Error: " + errorResponse.errorCode;</span>
+        }
+<span class="cstat-no" title="statement not covered" >        if(errorResponse.errorMessage !== undefined &amp;&amp; errorResponse.errorMessage !== null) {</span>
+<span class="cstat-no" title="statement not covered" >          messageError = messageError + " Message Error: " + errorResponse.errorCode;</span>
+        }
+<span class="cstat-no" title="statement not covered" >        jobPostingUrlCtrl.showMessageError = messageError;</span>
+<span class="cstat-no" title="statement not covered" >        $log.error(responseError);</span>
+      });
+    };
+&nbsp;
+    jobPostingUrlCtrl.changeJobPostingUrlSorting = function(column) {
+      if (jobPostingUrlCtrl.sortJobPostingUrlTable.column === column) {
+        jobPostingUrlCtrl.sortJobPostingUrlTable.descending = !jobPostingUrlCtrl.sortJobPostingUrlTable.descending;
+      } else {
+        jobPostingUrlCtrl.sortJobPostingUrlTable.column = column;
+        jobPostingUrlCtrl.sortJobPostingUrlTable.descending = false;
+      }
+    };
+&nbsp;
+    jobPostingUrlCtrl.getArrowSortingClass = function (column) {
+      <span class="missing-if-branch" title="else path not taken" >E</span>if(jobPostingUrlCtrl.sortJobPostingUrlTable.column === column) {
+        if (!jobPostingUrlCtrl.sortJobPostingUrlTable.descending) {
+          return 'fa-caret-up';
+        } else {
+          return 'fa-caret-down';
+        }
+      } else {
+<span class="cstat-no" title="statement not covered" >        return 'fa-caret-down';</span>
+      }
+    };
+&nbsp;
+    initController();
+&nbsp;
+  });
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu Dec 22 2016 12:21:09 GMT-0300 (Hora estándar de Argentina)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>
